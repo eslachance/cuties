@@ -1,0 +1,26 @@
+{
+  "name": "cuties",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "solid-js": "^1.7.8"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.134",
+    "@unocss/preset-icons": "^0.57.1",
+    "eslint": "^8.49.0",
+    "eslint-plugin-solid": "^0.13.0",
+    "unocss": "^0.55.7",
+    "vite": "^4.4.5",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "volta": {
+    "node": "18.17.1"
+  }
+}
