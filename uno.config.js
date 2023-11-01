@@ -6,5 +6,5 @@ import {
 } from 'unocss';
 
 export default defineConfig({
-  presets: [presetAttributify(), presetUno(), presetIcons()],
+  presets: [presetAttributify(), presetUno(), presetIcons()]
 });

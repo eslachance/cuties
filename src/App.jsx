@@ -1,13 +1,10 @@
 import { For, createResource, createSignal } from 'solid-js';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-
 const fetchData = async () =>
   fetch(import.meta.env.VITE_API_URL).then((res) => res.json());
 
 function App() {
-  const [todos, { mutate, refetch }] = createResource(fetchData);
+  const [todos] = createResource(fetchData);
 
   const [count, setCount] = createSignal(10);
   const adjustedCount = () => count() === 'all' ? todos()?.total : count();
@@ -18,7 +15,11 @@ function App() {
 
   return (
     <div class="flex flex-col h-[100dvh] justify-between items-center flex-grow">
-      <Header />
+      <nav class="py-2 bg-black/25 h-6 w-full">
+        <div class="flex flex-row items-center justify-center">
+          <p class="p-0 m-0">Todo List</p>
+        </div>
+      </nav>
       <div class="flex-grow overflow-y-scroll w-full p-0 flex justify-center">
         <div class="flex-grow p-3 max-w-[1080px]">
           <div id="form" class="flex items-center flex-grow">
@@ -59,7 +60,11 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div class="py-2 bg-black/25 h-6 w-full">
+        <div class="flex flex-row items-center justify-center">
+          <p class="p-0 m-0">Not Copyrighted</p>
+        </div>
+      </div>
     </div>
   );
 }
